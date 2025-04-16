@@ -2,20 +2,32 @@
 // @ts-nocheck
 	import "../app.css";
 	import { Button, Alert, Card, Navbar, NavBrand, NavLi, NavUl, NavHamburger, Toast } from 'flowbite-svelte';
-	import { FireOutline } from 'flowbite-svelte-icons';
+	import { FireOutline, CaretRightSolid, CaretLeftSolid } from 'flowbite-svelte-icons';
 	import { Gallery } from 'flowbite-svelte';
     import { ArrowRightOutline } from 'flowbite-svelte-icons';
+	import { Carousel } from 'flowbite-svelte';
 	const image1 = {
-		alt: 'erbology',
-		src: 'https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg'
+		alt: 'logo',
+		src: '/images/dh_logo.jpeg'
 	};
 	const images2 = [
-		{ alt: 'shoes', src: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg' },
-		{ alt: 'small bag', src: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg' },
-		{ alt: 'plants', src: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg' },
-		{ alt: 'watch', src: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg' },
-		{ alt: 'shoe', src: 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg' }
+		{ alt: 'pic_blue', src: '/images/image_blue.jpeg' },
+		{ alt: 'pic_red', src: '/images/image_red.jpeg' },
+		{ alt: 'pic_black', src: '/images/image_black.jpeg' },
 	];
+	const videos = [
+		{ alt: 'vid_1', src: '/videos/video-1.mp4' },
+		{ alt: 'vid_2', src: '/videos/video-2.mp4' }
+  	];
+	let current = 0;
+
+	function next() {
+		current = (current + 1) % videos.length;
+	}
+
+	function prev() {
+		current = (current - 1 + videos.length) % videos.length;
+	}
 </script>
   
 <!-- Navbar stays on top -->
@@ -28,7 +40,7 @@
 	<NavHamburger on:click={toggle} />
 	<NavUl {hidden}>
 	  <NavLi href="/">Home</NavLi>
-	  <NavLi href="src/routes/about">About</NavLi>
+	  <NavLi href="/about">About</NavLi>
 	  <NavLi href="/contact">Classes</NavLi>
 	  <NavLi href="/events">Events</NavLi>
 	  <NavLi href="/contact">Contact</NavLi>
@@ -45,17 +57,60 @@
 		  <p>Passion.</p>
 		</h5>
 		<p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
-		  Dancing Hearts Dance Company
+		  Dancing Hearts Dance Company...
 		</p>
-		<Button as="a" href="/booking" class="w-fit">
+		<Button as="a" href="/contact" class="w-fit">
 		  BOOK NOW <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
 		</Button>
 	  </Card>
 	</div>
   
 	<!-- Gallery section on the right -->
-	<div class="w-1/2 p-4 grid gap-4 bg-white/80 shadow-lg rounded-lg overflow-auto">
-	  <img src={image1.src} alt={image1.alt} class="h-auto max-w-full rounded-lg" />
-	  <Gallery class="grid-cols-5" items={images2} />
+	<div class="w-1/2 p-4 bg-white/80 shadow-lg rounded-lg">
+		<div class="grid grid-cols-2 gap-4 mb-4">
+			<!-- Top left: Logo -->
+			<div>
+				<img src={image1.src} alt={image1.alt} class="w-full h-auto rounded-lg" />
+			</div>
+
+			<div class="relative w-[300px] aspect-[7/10] mx-auto">
+				{#each videos as video, index}
+					<div class={`absolute inset-0 transition-opacity duration-500 ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+						<!-- svelte-ignore element_invalid_self_closing_tag -->
+						<video
+							src={video.src}
+							autoplay
+							muted
+							loop
+							playsinline
+							class="w-full h-full object-cover rounded-lg"
+						/>
+					</div>
+				{/each}
+			
+				<!-- Controls -->
+				<!-- Arrows -->
+				<button
+					on:click={prev}
+					class="absolute top-1/2 left-2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/60 z-20"
+				>
+					<CaretLeftSolid class="w-5 h-5" />
+				</button>
+
+				<button
+					on:click={next}
+					class="absolute top-1/2 right-2 -translate-y-1/2 text-white bg-black/40 rounded-full p-2 hover:bg-black/60 z-20"
+				>
+					<CaretRightSolid class="w-5 h-5" />
+				</button>
+			</div>
+		</div>
+
+		<!-- Bottom row: Three images side by side -->
+		<div class="grid grid-cols-3 gap-4">
+			<img src={images2[0].src} alt={images2[0].alt} class="w-full h-auto rounded-lg" />
+			<img src={images2[1].src} alt={images2[1].alt} class="w-full h-auto rounded-lg" />
+			<img src={images2[2].src} alt={images2[2].alt} class="w-full h-auto rounded-lg" />
+		</div>
 	</div>
-  </div>
+</div>
