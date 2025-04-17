@@ -45,6 +45,6 @@
   
 <!-- Slot for page-specific content -->
 <!-- red-800 -->
-<main class="bg-pink-100 p-4">
+<main class="bg-red-400 p-4">
 	<slot />
 </main>

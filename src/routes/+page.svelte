@@ -51,7 +51,7 @@
     </div>
   
     <!-- Gallery section on the right -->
-    <div class="w-1/2 p-4 bg-white/80 shadow-lg rounded-lg">
+    <div class="w-1/2 p-4 bg-white shadow-lg rounded-lg">
       <div class="grid grid-cols-2 gap-4 mb-4">
         <!-- Top left: Logo -->
         <div>
