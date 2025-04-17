@@ -4,6 +4,5 @@
 </script>
 
 <div class="bg-pink-100 min-h-screen p-8">
-	<h1 class="text-3xl font-bold text-red-600">About Layout</h1>
 	<slot />
 </div>
