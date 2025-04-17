@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { DiscordSolid, YoutubeSolid, XSolid } from 'flowbite-svelte-icons';
+	import { DiscordSolid, YoutubeSolid, XSolid, InstagramSolid } from 'flowbite-svelte-icons';
+	import Icon from '@iconify/svelte';
 
 	let members = [
 		{
@@ -8,7 +9,7 @@
 			alt: 'Isabelle Urquizo',
 			name: 'Isabelle Urquizo',
 			jobTitle: 'Founder',
-			description: 'ygygygyg'
+			description: 'Main choreographer for Dancing Hearts'
 		},
 		{
 			href: '/',
@@ -16,7 +17,7 @@
 			alt: 'Diana Duran',
 			name: 'Diana Duran',
 			jobTitle: 'Co-Founder',
-			description: 'Jese drives the technical strategy of the flowbite platform and brand.'
+			description: 'Manager'
 		},
 		{
 			href: '/',
@@ -24,7 +25,7 @@
 			alt: 'Nancy Misioka',
 			name: 'Nancy Misioka',
 			jobTitle: 'Co-Founder',
-			description: 'Michael drives the technical strategy of the flowbite platform and brand.'
+			description: 'Assistant choregrapher'
 		}
 	];
 </script>
@@ -34,7 +35,7 @@
 		<div class="text-center mb-12">
 			<h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Our Team</h2>
 			<p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-				Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind
+				Hello! We are a dance company who loves to teach and inspire students to use their artistic creations to the full extent!
 			</p>
 		</div>
 
@@ -53,9 +54,31 @@
 					<p class="mt-3 text-gray-600 dark:text-gray-400 text-sm">{member.description}</p>
 
 					<div class="mt-4 flex justify-center space-x-4 text-gray-500 dark:text-gray-400">
-						<a href="/" aria-label="Facebook"><DiscordSolid class="w-5 h-5 hover:text-blue-600" /></a>
-						<a href="/" aria-label="GitHub"><YoutubeSolid class="w-5 h-5 hover:text-gray-800 dark:hover:text-white" /></a>
-						<a href="/" aria-label="Twitter"><XSolid class="w-5 h-5 hover:text-blue-400" /></a>
+						<a
+							href="https://www.instagram.com/isabelleurquizo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Instagram"
+						>
+							<InstagramSolid class="w-5 h-5 hover:text-pink-600" />
+						</a>
+						<!-- YouTube -->
+						<a
+							href="https://youtube.com/@isabelleurquizo?si=y4m0sgiPgdM50SC5"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="YouTube"
+							>
+							<YoutubeSolid class="w-5 h-5 hover:text-red-600" />
+						</a>
+						<a
+							href="https://www.tiktok.com/@isabelleurquizo?is_from_webapp=1&sender_device=pc"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="TikTok"
+							>
+							<Icon icon="simple-icons:tiktok" class="w-5 h-5 hover:text-[#69C9D0]" />
+						</a>
 					</div>
 				</div>
 			{/each}
