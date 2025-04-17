@@ -38,7 +38,7 @@
 	  <NavLi href="/">Home</NavLi>
 	  <NavLi href="/about">About</NavLi>
 	  <!-- <NavLi href="/classes">Classes</NavLi> -->
-	  <NavLi href="/events">Events</NavLi>
+	  <NavLi href="/services">Services</NavLi>
 	  <NavLi href="/contact">Contact</NavLi>
 	</NavUl>
 </Navbar>

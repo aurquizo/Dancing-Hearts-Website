@@ -4,7 +4,6 @@
 
 	let members = [
 		{
-			href: '/',
 			src: '/images/isa.jpeg',
 			alt: 'Isabelle Urquizo',
 			name: 'Isabelle Urquizo',
@@ -12,7 +11,6 @@
 			description: 'Main choreographer for Dancing Hearts'
 		},
 		{
-			href: '/',
 			src: '/images/diana.jpeg',
 			alt: 'Diana Duran',
 			name: 'Diana Duran',
@@ -20,7 +18,6 @@
 			description: 'Manager'
 		},
 		{
-			href: '/',
 			src: '/images/nancy.jpeg',
 			alt: 'Nancy Misioka',
 			name: 'Nancy Misioka',
@@ -35,14 +32,15 @@
 		<div class="text-center mb-12">
 			<h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Our Team</h2>
 			<p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-				Hello! We are a dance company who loves to teach and inspire students to use their artistic creations to the full extent!
+				Hello! We are a dance company located in El Paso, Texas who love to teach and inspire students to use their artistic creations to the full extent!
 			</p>
 		</div>
 
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each members as member}
 				<div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 text-center">
-					<a href={member.href}>
+					<!-- svelte-ignore a11y_missing_attribute -->
+					<a>
 						<img
 							src={member.src}
 							alt={member.alt}
