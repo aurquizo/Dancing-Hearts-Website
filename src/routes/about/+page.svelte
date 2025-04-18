@@ -39,8 +39,8 @@
 	];
 </script>
 
-<section class="py-12 bg-white dark:bg-red-400">
-	<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-12 bg-white dark:bg-red-400 overflow-hidden">
+	<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 		<div class="text-center mb-10 sm:mb-12">
 			<h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Our Team</h2>
 			<p class="mt-4 text-lg text-gray-500 dark:text-white">
@@ -75,7 +75,7 @@
 						{/if}
 						{#if member.links.tiktok}
 						  <a href={member.links.tiktok} target="_blank" aria-label="TikTok">
-							<Icon icon="simple-icons:tiktok" class="w-5 h-5 hover:text-[#69C9D0]" />
+							<Icon icon="simple-icons:tiktok" class="w-5 h-5 hover:text-purple-800" />
 						  </a>
 						{/if}
 						{#if member.links.snapchat}

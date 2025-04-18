@@ -3,7 +3,8 @@
     import Icon from '@iconify/svelte';
 </script>
 
-<div class="h-[calc(100vh-10rem)] px-4 py-12 bg-white dark:bg-gray-900">
+<!--<div class="h-[calc(100vh-10rem)] px-4 py-12 bg-white dark:bg-gray-900">-->
+<div class="px-4 py-12 bg-white dark:bg-gray-900">
     <!-- Socials Section -->
     <div class="max-w-5xl mx-auto mb-16">
         <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
@@ -59,7 +60,7 @@
 
     <!-- Message Section Placeholder -->
     <div class="w-full px-4 sm:px-6 md:px-8">
-        <div class="max-w-lg mx-auto text-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="max-w-xl mx-auto text-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg mb-10">
             <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
                 Or Send Us a Message
             </h2>
@@ -67,7 +68,7 @@
             <form 
                 action="https://formspree.io/f/mvgknnrr" 
                 method="POST" 
-                class="grid gap-4 text-left max-w-xl mx-auto mt-8"
+                class="grid gap-4 text-left"
                 >
                 <label class="block">
                     <span class="text-gray-700 dark:text-white">Your Name</span>
@@ -84,7 +85,7 @@
                     <textarea name="message" rows="5" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
                 </label>
 
-                <button type="submit" class="bg-blue-600 dark: bg-red-400 hover:bg-red-500 text-white font-semibold py-2 px-4 rounded">
+                <button type="submit" class="bg-red-400 dark:bg-red-400 hover:bg-red-500 text-white font-semibold py-2 px-4 rounded">
                     Send Message
                 </button>
             </form>

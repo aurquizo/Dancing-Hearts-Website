@@ -38,12 +38,20 @@
       quote: "Dancing Hearts brought so much joy to our wedding. Highly recommended!",
     },
     {
-      name: "Carlos G.",
+      name: "Carol G.",
       quote: "Their team made my Quince unforgettable! I felt so confident dancing!",
     },
     {
       name: "Alyssa T.",
       quote: "The private lessons were a game changer. They taught me with so much patience and love!",
+    },
+    {
+      name: "Carmen B.",
+      quote: "Thank you thank you very much for your service!",
+    }, 
+    {
+      name: "Roxane J.",
+      quote: "Thank you so much you all are awesome!!!!",
     }
   ];
   let curr = 0;
