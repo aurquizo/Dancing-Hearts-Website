@@ -40,7 +40,7 @@
       <img
         src={image.src}
         alt={image.alt}
-        class={`absolute inset-0 bg-red-200 w-full h-full object-contain transition-opacity duration-700 ease-in-out ${
+        class={`absolute inset-0 bg-red-200 dark:bg-red-400 w-full h-full object-contain transition-opacity duration-700 ease-in-out ${
           index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
         }`}
       />
@@ -50,7 +50,7 @@
   <!-- Navigation Buttons -->
   <button
     on:click={prevImage}
-    class="absolute top-1/2 left-2 -translate-y-1/2 transition-opacity text-white bg-red-400 rounded-full p-2 hover:bg-red-600 z-20"
+    class="absolute top-1/2 left-2 -translate-y-1/2 transition-opacity text-white dark:text-red-400 bg-red-400 dark:bg-white rounded-full p-2 hover:bg-red-600 z-20"
     aria-label="Previous"
   >
     <CaretLeftSolid class="w-5 h-5" />
@@ -58,7 +58,7 @@
 
   <button
     on:click={nextImage}
-    class="absolute top-1/2 right-2 -translate-y-1/2 transition-opacity text-white bg-red-400 rounded-full p-2 hover:bg-red-600 z-20"
+    class="absolute top-1/2 right-2 -translate-y-1/2 transition-opacity text-white dark:text-red-400 bg-red-400 dark:bg-white rounded-full p-2 hover:bg-red-600 z-20"
     aria-label="Next"
   >
     <CaretRightSolid class="w-5 h-5" />

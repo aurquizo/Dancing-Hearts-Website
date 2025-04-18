@@ -2,7 +2,7 @@
 <script>
 // @ts-nocheck
 
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { Button, Card, Carousel } from 'flowbite-svelte';
   import { ArrowRightOutline, CaretLeftSolid, CaretRightSolid } from 'flowbite-svelte-icons';
 
@@ -57,10 +57,21 @@
   let curr = 0;
   let interval;
 
-  // Manually switch to a specific testimonial
-  const goToTestimonial = (index) => {
-    curr = index;
+  // Automatically change testimonial every 5 seconds
+  const startAutoPlay = () => {
+    interval = setInterval(() => {
+      curr = (curr + 1) % testimonials.length;
+    }, 5000); // Change every 5 seconds
   };
+
+  onMount(() => {
+    startAutoPlay();
+  });
+
+  // Clear interval on component destroy
+  onDestroy(() => {
+    clearInterval(interval);
+  });
 </script>
   
 <div class="flex flex-col md:flex-row h-auto md:h-[calc(100vh-7rem)] px-4 md:px-12 gap-6">
@@ -83,7 +94,7 @@
     {#if testimonials && testimonials.length > 0}
       <!--125-->
       <div class="mt-10">
-        <Card class="p-6 text-center dark:bg-red-400 w-full h-40 mx-auto relative ml-0">
+        <Card class="p-6 text-center dark:bg-red-400 w-full h-40 mx-auto relative ml-0 transition-opacity duration-700 ease-in-out">
           <h5 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
             {testimonials[curr].name}
           </h5>
