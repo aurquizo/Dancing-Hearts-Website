@@ -3,7 +3,7 @@
     import Icon from '@iconify/svelte';
 </script>
 
-<div class="min-h-screen px-4 py-12 bg-white dark:bg-gray-900">
+<div class="h-[calc(100vh-10rem)] px-4 py-12 bg-white dark:bg-gray-900">
     <!-- Socials Section -->
     <div class="max-w-5xl mx-auto mb-16">
         <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
@@ -49,7 +49,7 @@
             href="https://www.tiktok.com/@dancingheartsdco?is_from_webapp=1&sender_device=pcß"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex flex-col items-center p-6 bg-gray-200 dark:bg-gray-800 rounded-2xl shadow hover:scale-105 transition"
+            class="flex flex-col items-center p-6 bg-purple-200 dark:bg-purple-900 rounded-2xl shadow hover:scale-105 transition"
         >
             <Icon icon="simple-icons:tiktok" class="w-8 h-8 text-black dark:text-white mb-2" />
             <span class="text-sm text-gray-700 dark:text-white font-medium">TikTok</span>
@@ -58,35 +58,36 @@
     </div>
 
     <!-- Message Section Placeholder -->
-    <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
-        Or Send Us a Message
-        </h2>
-        <!-- Drop your contact form or input grid here -->
-        <form 
-            action="https://formspree.io/f/mvgknnrr" 
-            method="POST" 
-            class="grid gap-4 text-left max-w-xl mx-auto mt-8"
-            >
-            <label class="block">
-                <span class="text-gray-700 dark:text-white">Your Name</span>
-                <input type="text" name="name" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white" />
-            </label>
+    <div class="w-full px-4 sm:px-6 md:px-8">
+        <div class="max-w-lg mx-auto text-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+                Or Send Us a Message
+            </h2>
+            <!-- Drop your contact form or input grid here -->
+            <form 
+                action="https://formspree.io/f/mvgknnrr" 
+                method="POST" 
+                class="grid gap-4 text-left max-w-xl mx-auto mt-8"
+                >
+                <label class="block">
+                    <span class="text-gray-700 dark:text-white">Your Name</span>
+                    <input type="text" name="name" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-400" />
+                </label>
 
-            <label class="block">
-                <span class="text-gray-700 dark:text-white">Your Email</span>
-                <input type="email" name="email" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white" />
-            </label>
+                <label class="block">
+                    <span class="text-gray-700 dark:text-white">Your Email</span>
+                    <input type="email" name="email" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-400" />
+                </label>
 
-            <label class="block">
-                <span class="text-gray-700 dark:text-white">Your Message</span>
-                <textarea name="message" rows="5" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white"></textarea>
-            </label>
+                <label class="block">
+                    <span class="text-gray-700 dark:text-white">Your Message</span>
+                    <textarea name="message" rows="5" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+                </label>
 
-            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-                Send Message
-            </button>
-        </form>
-
+                <button type="submit" class="bg-blue-600 dark: bg-red-400 hover:bg-red-500 text-white font-semibold py-2 px-4 rounded">
+                    Send Message
+                </button>
+            </form>
+        </div>
     </div>
 </div>
