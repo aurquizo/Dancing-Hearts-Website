@@ -44,6 +44,7 @@
 	  <NavLi href="/about" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">About</NavLi>
 	  <!-- <NavLi href="/classes">Classes</NavLi> -->
 	  <NavLi href="/services" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">Services</NavLi>
+	  <NavLi href="/gallery" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">Gallery</NavLi>
 	  <NavLi href="/contact" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">Contact</NavLi>
 	  <NavLi>
 		<DarkMode class="text-gray-800 dark:text-white border-white dark:border-gray-800 -mt-[8px]" />

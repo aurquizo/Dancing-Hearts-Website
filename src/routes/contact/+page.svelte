@@ -4,7 +4,7 @@
 </script>
 
 <!--<div class="h-[calc(100vh-10rem)] px-4 py-12 bg-white dark:bg-gray-900">-->
-<div class="px-4 py-12 bg-white dark:bg-gray-900">
+<div class="px-4 py-12 bg-white dark:bg-gray-800">
     <!-- Socials Section -->
     <div class="max-w-5xl mx-auto mb-16">
         <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
@@ -60,7 +60,7 @@
 
     <!-- Message Section Placeholder -->
     <div class="w-full px-4 sm:px-6 md:px-8">
-        <div class="max-w-xl mx-auto text-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg mb-10">
+        <div class="max-w-xl mx-auto text-center bg-white dark:bg-gray-600 p-6 rounded-lg shadow-lg mb-10">
             <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
                 Or Send Us a Message
             </h2>
