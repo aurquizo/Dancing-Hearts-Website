@@ -1,7 +1,9 @@
 <script>
 // @ts-nocheck
 	import "../app.css";
+	import { DarkMode } from 'flowbite-svelte';
 	import { Navbar, NavBrand, NavHamburger, NavUl, NavLi } from 'flowbite-svelte';
+	import { HeartOutline } from 'flowbite-svelte-icons'
 	const image1 = {
 		alt: 'logo',
 		src: '/images/dh_logo.jpeg'
@@ -27,24 +29,31 @@
 </script>
   
 <!-- Navbar stays on top -->
-<Navbar let:hidden let:toggle color="primary">
+<Navbar let:hidden let:toggle class="bg-white dark:bg-red-400">
 	<NavBrand href="/">
-	  <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-red-800">
-		DANCING HEARTS
+	  <span class="self-center whitespace-nowrap text-2xl font-semibold text-red-400 dark:text-white">
+		<p class="flex items-center">
+		DANCING HEARTS 
+		<HeartOutline class="w-6 h-6 ms-2 text-red-400 dark:text-white " />
+		</p>
 	  </span>
 	</NavBrand>
 	<NavHamburger on:click={toggle} />
 	<NavUl {hidden}>
-	  <NavLi href="/">Home</NavLi>
-	  <NavLi href="/about">About</NavLi>
+	  <NavLi href="/" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">Home</NavLi>
+	  <NavLi href="/about" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">About</NavLi>
 	  <!-- <NavLi href="/classes">Classes</NavLi> -->
-	  <NavLi href="/events">Events</NavLi>
-	  <NavLi href="/contact">Contact</NavLi>
+	  <NavLi href="/services" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">Services</NavLi>
+	  <NavLi href="/gallery" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">Gallery</NavLi>
+	  <NavLi href="/contact" class="text-base text-gray-800 dark:text-white hover:!text-red-400 dark:hover:!text-gray-300">Contact</NavLi>
+	  <NavLi>
+		<DarkMode class="text-gray-800 dark:text-white border-white dark:border-gray-800 -mt-[8px]" />
+	  </NavLi> 
 	</NavUl>
 </Navbar>
   
 <!-- Slot for page-specific content -->
 <!-- red-800 -->
-<main class="bg-red-400 p-4">
+<main class="bg-red-400 dark:bg-gray-800 p-4">
 	<slot />
 </main>

@@ -48,5 +48,9 @@
 	},
 	"keywords": [
 		"svelte"
-	]
+	],
+	"dependencies": {
+		"@iconify/svelte": "^4.2.0",
+		"lucide-svelte": "^0.488.0"
+	}
 }
