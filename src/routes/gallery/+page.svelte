@@ -34,47 +34,33 @@
 </script>
 
 <div class="carousel-container w-full max-w-[1280px] mx-auto px-4 relative">
-    <!-- Image Display -->
-    <div class="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden relative">
+  <!-- Image Display -->
+  <div class="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden relative rounded-lg shadow-lg">
+    {#each images as image, index}
       <img
-        src={images[currentIndex].src}
-        alt={images[currentIndex].alt}
-        class="w-full h-full object-contain shadow-lg"
+        src={image.src}
+        alt={image.alt}
+        class={`absolute inset-0 bg-red-200 w-full h-full object-contain transition-opacity duration-700 ease-in-out ${
+          index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+        }`}
       />
-    </div>
-  
-    <!-- Navigation Buttons -->
-    <button
-          on:click={prevImage}
-          class="absolute top-1/2 left-2 -translate-y-1/2 text-white bg-red-400 rounded-full p-2 hover:bg-red-600 z-20"
-        >
-          <CaretLeftSolid class="w-5 h-5" />
-        </button>
+    {/each}
+  </div>
 
-        <button
-          on:click={nextImage}
-          class="absolute top-1/2 right-2 -translate-y-1/2 text-white bg-red-400 rounded-full p-2 hover:bg-red-600 z-20"
-        >
-          <CaretRightSolid class="w-5 h-5" />
-    </button>
+  <!-- Navigation Buttons -->
+  <button
+    on:click={prevImage}
+    class="absolute top-1/2 left-2 -translate-y-1/2 transition-opacity text-white bg-red-400 rounded-full p-2 hover:bg-red-600 z-20"
+    aria-label="Previous"
+  >
+    <CaretLeftSolid class="w-5 h-5" />
+  </button>
+
+  <button
+    on:click={nextImage}
+    class="absolute top-1/2 right-2 -translate-y-1/2 transition-opacity text-white bg-red-400 rounded-full p-2 hover:bg-red-600 z-20"
+    aria-label="Next"
+  >
+    <CaretRightSolid class="w-5 h-5" />
+  </button>
 </div>
-
-<style>
-.carousel-container {
-  position: relative;
-}
-.carousel-container button {
-  cursor: pointer;
-}
-</style>
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
