@@ -86,7 +86,7 @@
       <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
         Dancing Hearts Dance Company...
       </p> -->
-      <Button as="a" href="/contact" class="w-fit dark:bg-gray-800">
+      <Button as="a" href="/contact" class="w-fit dark:bg-gray-800 dark:hover:bg-gray-700">
         BOOK NOW <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
       </Button>
     </Card>

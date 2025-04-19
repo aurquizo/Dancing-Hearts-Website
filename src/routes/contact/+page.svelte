@@ -8,7 +8,7 @@
     <!-- Socials Section -->
     <div class="max-w-5xl mx-auto mb-16">
         <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
-        Follow Us On Our Socials (DM us for Inquires)
+            Follow us on our socials! (DM us for inquiries)
         </h1>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
