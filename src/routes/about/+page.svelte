@@ -8,7 +8,7 @@
 			alt: 'Isabelle Urquizo',
 			name: 'Isabelle Urquizo',
 			jobTitle: 'Founder',
-			description: 'Main Choreographer for Dancing Hearts',
+			description: 'Main Choreographer',
 			links: {
 				instagram: 'https://www.instagram.com/isabelleurquizo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
 				youtube: 'https://youtube.com/@isabelleurquizo?si=y4m0sgiPgdM50SC5',
@@ -30,7 +30,7 @@
 			alt: 'Nancy Misioka',
 			name: 'Nancy Misioka',
 			jobTitle: 'Co-Founder',
-			description: 'Assistant Choregrapher',
+			description: 'Assistant Choreographer',
 			links: {
 				instagram: 'https://www.instagram.com/tuamoni22?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
 				snapchat: 'https://snapchat.com/t/uCkbCHi4'
@@ -44,7 +44,7 @@
 		<div class="text-center mb-10 sm:mb-12">
 			<h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Our Team</h2>
 			<p class="mt-4 text-lg text-gray-500 dark:text-white">
-				Hello! We are a dance company located in El Paso, Texas who love to teach and inspire students to use their artistic creations to the full extent!
+				Hello! We are a dance company located in El Paso, Texas, that loves to teach and inspire students to fully express their artistic creations!
 			</p>
 		</div>
 

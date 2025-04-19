@@ -50,7 +50,7 @@
   <!-- Navigation Buttons -->
   <button
     on:click={prevImage}
-    class="absolute top-1/2 left-2 -translate-y-1/2 transition-opacity text-white dark:text-red-400 bg-red-400 dark:bg-white rounded-full p-2 hover:bg-red-600 z-20"
+    class="absolute top-1/2 left-2 -translate-y-1/2 transition-opacity text-white dark:text-red-400 bg-red-400 dark:bg-white rounded-full p-2 hover:bg-red-600 dark:hover:bg-red-200 z-20"
     aria-label="Previous"
   >
     <CaretLeftSolid class="w-5 h-5" />
@@ -58,7 +58,7 @@
 
   <button
     on:click={nextImage}
-    class="absolute top-1/2 right-2 -translate-y-1/2 transition-opacity text-white dark:text-red-400 bg-red-400 dark:bg-white rounded-full p-2 hover:bg-red-600 z-20"
+    class="absolute top-1/2 right-2 -translate-y-1/2 transition-opacity text-white dark:text-red-400 bg-red-400 dark:bg-white rounded-full p-2 hover:bg-red-600 dark:hover:bg-red-200 z-20"
     aria-label="Next"
   >
     <CaretRightSolid class="w-5 h-5" />
