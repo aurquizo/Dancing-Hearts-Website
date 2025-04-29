@@ -81,6 +81,11 @@
                 </label>
 
                 <label class="block">
+                    <span class="text-gray-700 dark:text-white">Your Phone Number</span>
+                    <input type="tel" name="phone" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-400" />
+                </label>
+
+                <label class="block">
                     <span class="text-gray-700 dark:text-white">Your Message</span>
                     <textarea name="message" rows="5" required class="w-full mt-1 p-2 border rounded dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
                 </label>
