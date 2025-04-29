@@ -83,9 +83,6 @@
         <p>Balance.</p>
         <p>Passion.</p>
       </h5>
-      <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
-        Dancing Hearts Dance Company...
-      </p> -->
       <Button as="a" href="/contact" class="w-fit dark:bg-gray-800 dark:hover:bg-gray-700">
         BOOK NOW <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
       </Button>
@@ -118,7 +115,7 @@
 
   <!-- Gallery section on the right -->
   <div class="w-full md:w-1/2 p-4 bg-white dark:bg-red-400 shadow-lg rounded-lg">
-    <div class="grid grid-cols-2 gap-4 mb-20">
+    <div class="grid grid-cols-2 gap-4 mb-10">
       <!-- Top left: Logo -->
       <div>
         <img src={image1.src} alt={image1.alt} class="w-full h-auto rounded-lg shadow-md" />
